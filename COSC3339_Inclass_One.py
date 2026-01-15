@@ -4,7 +4,7 @@
 
 """
 ASSIGNMENT: INTRODUCTION TO MERGING
------------------------------------
+---------------------------------
 This file contains several methods with logical errors, poor style, 
 and complex constructs. Your goal is to fix them across multiple 
 branches to simulate merge conflicts.
@@ -12,10 +12,12 @@ branches to simulate merge conflicts.
 
 import math
 
-# This method contains a bug. In your commit note, state the bug and how you fixed it
+import math
+
 def calculate_hypotenuse(side_a, side_b):
-    result = side_a + side_b  
+    result = math.sqrt(side_a**2 + side_b**2)
     return result
+
 
 # This method contains a bug. In your commit note, state the bug and how you fixed it
 def count_words(sentence):
