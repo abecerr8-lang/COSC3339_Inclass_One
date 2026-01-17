@@ -75,6 +75,16 @@ def _validate_imput(text_value):
     return valud_imput
 
 
+def process_user_data(text_value):
+   
+    is_valid = _validate_imput(text_value)
+    
+    if is_valid:
+        return f"Valid input: {text_value}"
+    else:
+        return "Invalid input provided."
+
+
 def main():
     print("--- STARTING TESTS ---")
 
