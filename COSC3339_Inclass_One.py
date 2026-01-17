@@ -60,19 +60,18 @@ def curve_scores(scores):
     return list(map(lambda x: min(x + 5, 100), scores))
 
 
-# For scenario three change the name of this method.
-# For scenario five fix the typos
-def _validate_imput(text_value):
+def _check_input(text_value):
 
-    valud_imput = True 
+    valid_input = True 
     
     if text_value is None:
-        valud_imput = False
+        valid_input = False
     
     if text_value == "":
-        valud_imput = False
+        valid_input = False
         
-    return valud_imput
+    return valid_input
+
 
 
 def main():
