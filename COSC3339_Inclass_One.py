@@ -43,7 +43,6 @@ def calculate_shipping_cost(weight, destination):
     if weight <= 5:
       cost = base_cost
     else:
-      # Over 5 lbs, add $5 per extra lb
       extra_weight = weight - 5
       cost = base_cost + (extra_weight * 5.0)
       
@@ -55,13 +54,10 @@ def calculate_shipping_cost(weight, destination):
   return cost
 
 
-# This method uses funky logic. Rewrite it using different loop structures
 def curve_scores(scores):
   return list(map(lambda x: min(x + 5, 100), scores))
 
 
-# For scenario three change the name of this method.
-# For scenario five fix the typos
 def _validate_imput(text_value):
 
   valud_imput = True 
@@ -103,7 +99,7 @@ def main():
 
   print("-" * 20)
 
-  
+
   print("\n--- END OF TESTS ---")
 
 main()
