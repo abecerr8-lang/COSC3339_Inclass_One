@@ -25,34 +25,34 @@ def count_words(sentence):
     return len(words)
 
 
-# This method is long to allow for non-overlapping edits.
 def calculate_shipping_cost(weight, destination):
-    cost = 0.0
+    if weight < 0:
+        print("Error: Weight cannot be negative.")
+        return None
+
+    shipping_cost = 0.0   
     
     if destination == "US":
-        base_cost = 5.0
+        base_cost = 7.5     
         if weight <= 10:
-            cost = base_cost
+            shipping_cost = base_cost
         else:
-            # Over 10 lbs, add $1 per extra lb
             extra_weight = weight - 10
-            cost = base_cost + (extra_weight * 1.0)
+            shipping_cost = base_cost + (extra_weight * 1.25)
             
     elif destination == "International":
         base_cost = 15.0
         if weight <= 5:
-            cost = base_cost
+            shipping_cost = base_cost
         else:
-            # Over 5 lbs, add $5 per extra lb
             extra_weight = weight - 5
-            cost = base_cost + (extra_weight * 5.0)
+            shipping_cost = base_cost + (extra_weight * 5.0)
             
     else:
-        # Unknown destination
         print(f"Error: Unknown destination {destination}")
         return None
 
-    return cost
+    return shipping_cost
 
 
 # This method uses funky logic. Rewrite it using different loop structures
